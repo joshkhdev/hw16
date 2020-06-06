@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 my-2">
+            <input type="text" class="form-control" placeholder="Поиск сотрудников по имени и фамилии"
+                [(ngModel)]="searchStr">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 my-2">
+            <label for="sortType">Сортировка</label>
+            <select class="form-control custom-select" id="sortType" [(ngModel)]="sortType">
+                <option value="0">По возрастанию id</option>
+                <option value="1">По убыванию id</option>
+                <option value="2">По возрасту в прямом порядке</option>
+                <option value="3">По возрасту в обратном порядке</option>
+            </select>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Имя</th>
+                <th scope="col">Фамилия</th>
+                <th scope="col">Отчество</th>
+                <th scope="col">Телефон</th>
+                <th scope="col">Эл. почта</th>
+                <th scope="col">Дата рождения</th>
+                <th scope="col">Отдел</th>
+                <th scope="col" class="text-right">
+                    <button class="btn btn-primary" (click)="onAddProfile()">
+                        Добавить пользователя
+                    </button>
+                </th>
+            </tr>
+        </thead>
+        <tbody *ngIf="isLoaded">
+            <tr *ngFor="let worker of workers | sortFilter: sortType | searchFilter: searchStr">
+                <th scope=" row">{{ worker.id }}</th>
+                <td>{{ worker.name }}</td>
+                <td>{{ worker.surname }}</td>
+                <td>{{ worker.patronymic }}</td>
+                <td>{{ worker.phone }}</td>
+                <td>{{ worker.email }}</td>
+                <td>{{ worker.date }}</td>
+                <td>{{ getRole(worker.role) }}</td>
+                <td class="text-right">
+                    <button class="btn btn-secondary" (click)="onLinkProfile(worker.id)">
+                        Редактировать
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,44 @@
+{
+  "workers": [
+    {
+      "name": "Иван",
+      "surname": "Иванов",
+      "patronymic": "Иванович",
+      "phone": "+7(925)458-7960",
+      "email": "ivanov.i.i@mail.ru",
+      "date": "01.01.1970",
+      "role": 0,
+      "id": 1
+    },
+    {
+      "name": "Василий",
+      "surname": "Васильев",
+      "patronymic": "Васильевич",
+      "phone": "+7(917)475-1479",
+      "email": "vasiliev.v.v@yandex.ru",
+      "date": "04.04.1985",
+      "role": 1,
+      "id": 2
+    },
+    {
+      "name": "Петр",
+      "surname": "Петров",
+      "patronymic": "Петрович",
+      "phone": "+7(975)672-1095",
+      "email": "petrov.pp@bk.ru",
+      "date": "27.04.1979",
+      "role": 2,
+      "id": 3
+    },
+    {
+      "name": "Евгений",
+      "surname": "Евгеньев",
+      "patronymic": "Евгеньевич",
+      "phone": "+7(999)646-7385",
+      "email": "evgeniev.e.e@post.com",
+      "date": "16.08.1993",
+      "role": 3,
+      "id": 4
+    }
+  ]
+}
